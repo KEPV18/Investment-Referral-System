@@ -1,0 +1,6 @@
+# Ignore database connection file
+config.php
+
+
+# Ignore database connection file in config directory
+admin/config2.php

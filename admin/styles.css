@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: hsl(var(--background));
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.bg-primary {
+    background-color: hsl(var(--primary));
+}
+
+.bg-background {
+    background-color: hsl(var(--background));
+}
+
+.text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+}
+
+.text-muted-foreground {
+    color:hsl(332.31deg 75.09% 46.32%);
+}
+
+.rounded-lg {
+    border-radius: var(--radius);
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: hsl(var(--foreground));
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav a {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    text-decoration: none;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.nav a:hover {
+    background-color: hsl(var(--primary-foreground));
+}
+
+button, .btn {
+    padding: 10px 20px;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+button:hover, .btn:hover {
+    background-color: hsl(var(--primary-foreground));
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid hsl(var(--border));
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: hsl(var(--muted));
+    color: hsl(var(--foreground));
+}
+
+table tr:nth-child(even) {
+    background-color: hsl(var(--muted-foreground));
+}
+
+table tr:hover {
+    background-color: hsl(var(--accent));
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    text-decoration: none;
+    border-radius: var(--radius);
+}
+
+footer a.btn:hover {
+    background-color: hsl(var(--secondary-foreground));
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    text-decoration: none;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: hsl(var(--primary-foreground));
+}
+
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column; /* ترتيب الأزرار عمودياً على الشاشات الأصغر */
+    }
+}

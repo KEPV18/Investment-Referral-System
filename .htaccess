@@ -1,0 +1,24 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+</IfModule>
+
+# منع الوصول إلى ملف config.php
+<Files "config.php">
+    Require all denied
+</Files>
+
+# تحويل الروابط القصيرة إلى الروابط الطويلة
+RewriteEngine On
+RewriteBase /
+
+# تحويل الطلبات من الروابط القصيرة إلى الملفات PHP
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+
+# تحويل رابط قديم إلى رابط جديد
+RewriteRule ^old-page\.php$ /new-page.php [L,R=301]
+
+# تعيين سياسة الأذونات
+Header set Permissions-Policy "geolocation=(self), microphone=()"
